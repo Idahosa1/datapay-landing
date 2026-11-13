@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>DataPay — Buy Airtime, Pay Bills, Seamlessly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Comic+Neue:wght@700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playwrite+US+Modern:wght@100..400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body>
+  <!-- Landing Page Hero & Nav Section -->
+  <header class="hero-wrapper" id="home">
+    <!-- Subtle Background Texture / Framing -->
+    <div class="hero-bg-frame" aria-hidden="true">
+      <img src="assets/hero-bg-pattern.png" alt="" class="hero-bg-pattern">
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="nav-container" aria-label="Main Navigation">
+      <div class="nav-inner">
+        <!-- Logo -->
+        <a href="#home" class="logo-link" aria-label="DataPay Home">
+          <img src="assets/logo.svg" alt="DataPay" class="logo-img" width="84" height="20">
+        </a>
+
+        <!-- Centered Pill Nav Menu -->
+        <div class="nav-pill-menu" role="menubar">
+          <a href="#home" class="nav-pill-item active" role="menuitem" aria-current="page">Home</a>
+          <a href="#features" class="nav-pill-item" role="menuitem">Features</a>
+          <a href="#testimonials" class="nav-pill-item" role="menuitem">Testimonials</a>
+          <a href="#contact" class="nav-pill-item" role="menuitem">Contact</a>
+        </div>
+
+        <!-- Right Action CTAs -->
+        <div class="nav-cta-group">
+          <a href="#login" class="btn btn-secondary-nav">Log In</a>
+          <a href="#get-started" class="btn btn-primary-nav">Get Started</a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div class="mobile-menu-drawer" id="mobileMenuDrawer" aria-hidden="true">
+        <div class="mobile-nav-links">
+          <a href="#home" class="mobile-nav-link active">Home</a>
+          <a href="#features" class="mobile-nav-link">Features</a>
+          <a href="#testimonials" class="mobile-nav-link">Testimonials</a>
+          <a href="#contact" class="mobile-nav-link">Contact</a>
+        </div>
+        <div class="mobile-nav-cta">
+          <a href="#login" class="btn btn-secondary-nav w-full">Log In</a>
+          <a href="#get-started" class="btn btn-primary-nav w-full">Get Started</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Content: Headline + Subtext + CTA -->
+    <div class="hero-content">
+      <div class="hero-text-block">
+        <h1 class="hero-headline" aria-label="Buy Airtime, Pay Bills, Seamlessly">
+          <span class="hero-headline-regular">Buy Airtime, Pay Bills,</span>
+          <span class="hero-headline-bold font-cycle-word font-state-instrument" id="heroWordDynamic">Seamlessly</span>
+        </h1>
+        <p class="hero-subtext">
+          Everything you need, all in one place. Top up, pay bills, and stay connected without the hassle.
+        </p>
+      </div>
+
+      <div class="hero-cta-wrapper">
+        <a href="#get-started" class="btn btn-hero-cta">
+          Get Started
+        </a>
+      </div>
+
+      <!-- Dashboard Preview Container (Video House) -->
+      <div class="dashboard-preview-card">
+        <div class="dashboard-preview-inner">
+          <video 
+            class="dashboard-preview-video" 
+            autoplay 
+            loop 
+            muted 
+            playsinline 
+            preload="auto"
+            poster="assets/dashboard-preview.png"
+            width="1920" 
+            height="1080"
+            aria-label="DataPay Web Application Dashboard Video Preview"
+          >
+            <source src="assets/dashboard-film.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Section: Getting Started In 3 Simple Steps -->
+    <section class="section section-how-it-works" id="how-it-works">
+      <div class="section-container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-eyebrow">GETTING STARTED</span>
+          <h2 class="section-title">Get Started In 3 Simple Steps</h2>
+        </div>
+
+        <div class="steps-container">
+          <!-- Step 1 -->
+          <div class="step-card">
+            <div class="step-number" aria-hidden="true">1</div>
+            <div class="step-content">
+              <h3 class="step-title">Sign Up</h3>
+              <p class="step-desc">Sign up with us for a free online account and receive your own digital wallet.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card">
+            <div class="step-number" aria-hidden="true">2</div>
+            <div class="step-content">
+              <h3 class="step-title">Fund Wallet</h3>
+              <p class="step-desc">Deposit funds into your wallet through various methods such as ATM card, cash deposit, online transfer, and more.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card">
+            <div class="step-number" aria-hidden="true">3</div>
+            <div class="step-content">
+              <h3 class="step-title">Enjoy Our Services</h3>
+              <p class="step-desc">Begin experiencing the benefits of DataPay, which include purchasing data, airtime, and effortlessly settling your bills.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Features / Services -->
+    <section class="section section-features" id="features">
+      <div class="section-container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-eyebrow">FEATURES</span>
+          <h2 class="section-title">Stay connected, without the runaround.</h2>
+        </div>
+
+        <div class="features-grid">
+          <!-- Card 1: Data Subscription -->
+          <div class="feature-card">
+            <div class="feature-card-content">
+              <div class="feature-icon-wrapper">
+                <img src="assets/icon-data-subscription.png" alt="Data Subscription" class="feature-icon-img" loading="lazy" width="100" height="100">
+              </div>
+              <div class="feature-card-text">
+                <h3 class="feature-card-title">Data Subscription</h3>
+                <p class="feature-card-desc">Seamlessly subscribe to your preferred data bundles and always stay connected to the internet.</p>
+              </div>
+            </div>
+            <button class="feature-card-btn" aria-label="Learn more about Data Subscription">
+              <img src="assets/arrow-right.svg" alt="" width="24" height="24">
+            </button>
+          </div>
+
+          <!-- Card 2: Airtime Recharge -->
+          <div class="feature-card">
+            <div class="feature-card-content">
+              <div class="feature-icon-wrapper">
+                <img src="assets/icon-airtime-recharge.png" alt="Airtime Recharge" class="feature-icon-img" loading="lazy" width="100" height="100">
+              </div>
+              <div class="feature-card-text">
+                <h3 class="feature-card-title">Airtime Recharge</h3>
+                <p class="feature-card-desc">Recharge your mobile phones with ease and never run out of talk time for your personal and business needs.</p>
+              </div>
+            </div>
+            <button class="feature-card-btn" aria-label="Learn more about Airtime Recharge">
+              <img src="assets/arrow-right.svg" alt="" width="24" height="24">
+            </button>
+          </div>
+
+          <!-- Card 3: Electricity Bill -->
+          <div class="feature-card">
+            <div class="feature-card-content">
+              <div class="feature-icon-wrapper">
+                <img src="assets/icon-electricity-bill.png" alt="Electricity Bill" class="feature-icon-img" loading="lazy" width="100" height="100">
+              </div>
+              <div class="feature-card-text">
+                <h3 class="feature-card-title">Electricity Bill*</h3>
+                <p class="feature-card-desc">Buy electricity tokens at cheap rates from all electricity companies and never run out of units for your daily tasks.</p>
+              </div>
+            </div>
+            <button class="feature-card-btn" aria-label="Learn more about Electricity Bill">
+              <img src="assets/arrow-right.svg" alt="" width="24" height="24">
+            </button>
+          </div>
+
+          <!-- Card 4: Cable TV Subscription -->
+          <div class="feature-card">
+            <div class="feature-card-content">
+              <div class="feature-icon-wrapper">
+                <img src="assets/icon-cable-tv.png" alt="Cable TV Subscription" class="feature-icon-img" loading="lazy" width="100" height="100">
+              </div>
+              <div class="feature-card-text">
+                <h3 class="feature-card-title">Cable TV Subscription*</h3>
+                <p class="feature-card-desc">Subscribe to your preferred Cable TV provider and never miss out on your favourite TV shows.</p>
+              </div>
+            </div>
+            <button class="feature-card-btn" aria-label="Learn more about Cable TV Subscription">
+              <img src="assets/arrow-right.svg" alt="" width="24" height="24">
+            </button>
+          </div>
+
+          <!-- Card 5: Airtime to Cash -->
+          <div class="feature-card">
+            <div class="feature-card-content">
+              <div class="feature-icon-wrapper">
+                <img src="assets/icon-airtime-to-cash.png" alt="Airtime to Cash" class="feature-icon-img" loading="lazy" width="100" height="100">
+              </div>
+              <div class="feature-card-text">
+                <h3 class="feature-card-title">Airtime to Cash*</h3>
+                <p class="feature-card-desc">No need to worry about recharging too much airtime, with this feature you can convert excess airtime to cash.</p>
+              </div>
+            </div>
+            <button class="feature-card-btn" aria-label="Learn more about Airtime to Cash">
+              <img src="assets/arrow-right.svg" alt="" width="24" height="24">
+            </button>
+          </div>
+
+          <!-- Card 6: Exam Pins -->
+          <div class="feature-card">
+            <div class="feature-card-content">
+              <div class="feature-icon-wrapper">
+                <img src="assets/icon-exam-pins.png" alt="Exam Pins" class="feature-icon-img" loading="lazy" width="100" height="100">
+              </div>
+              <div class="feature-card-text">
+                <h3 class="feature-card-title">Exam Pins*</h3>
+                <p class="feature-card-desc">Check your exam results without stress by buying exam pins for WAEC, NECO and others at affordable rates.</p>
+              </div>
+            </div>
+            <button class="feature-card-btn" aria-label="Learn more about Exam Pins">
+              <img src="assets/arrow-right.svg" alt="" width="24" height="24">
+            </button>
+          </div>
+        </div>
+
+        <!-- Note info banner -->
+        <div class="features-note reveal-on-scroll">
+          <img src="assets/info-circle.svg" alt="Info" width="24" height="24" class="info-icon">
+          <p class="info-text">Products with (*) will be included in subsequent releases</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Testimonials -->
+    <section class="section section-testimonials" id="testimonials">
+      <div class="section-container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-eyebrow">TESTIMONIALS</span>
+          <h2 class="section-title">Good things travel fast.</h2>
+        </div>
+
+        <div class="testimonials-wrapper">
+          <div class="testimonials-track" id="testimonialsTrack">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+              <p class="testimonial-quote">
+                I used DataPay to buy airtime when I need to continue a call quickly with my mom and it was swift.
+              </p>
+              <p class="testimonial-author">Joy Chidiebere</p>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+              <p class="testimonial-quote">
+                I used DataPay to buy airtime when I need to continue a call quickly with my mom and it was swift.
+              </p>
+              <p class="testimonial-author">Itohan Osamudiamen</p>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+              <p class="testimonial-quote">
+                I used DataPay to buy airtime when I need to continue a call quickly with my mom and it was swift.
+              </p>
+              <p class="testimonial-author">Itohan Osamudiamen</p>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial-card">
+              <p class="testimonial-quote">
+                I used DataPay to buy airtime when I need to continue a call quickly with my mom and it was swift.
+              </p>
+              <p class="testimonial-author">Moonlight</p>
+            </div>
+
+            <!-- Testimonial 5 (Loop) -->
+            <div class="testimonial-card">
+              <p class="testimonial-quote">
+                I used DataPay to buy airtime when I need to continue a call quickly with my mom and it was swift.
+              </p>
+              <p class="testimonial-author">Joy Chidiebere</p>
+            </div>
+
+            <!-- Testimonial 6 (Loop) -->
+            <div class="testimonial-card">
+              <p class="testimonial-quote">
+                I used DataPay to buy airtime when I need to continue a call quickly with my mom and it was swift.
+              </p>
+              <p class="testimonial-author">Itohan Osamudiamen</p>
+            </div>
+
+            <!-- Testimonial 7 (Loop) -->
+            <div class="testimonial-card">
+              <p class="testimonial-quote">
+                I used DataPay to buy airtime when I need to continue a call quickly with my mom and it was swift.
+              </p>
+              <p class="testimonial-author">Itohan Osamudiamen</p>
+            </div>
+
+            <!-- Testimonial 8 (Loop) -->
+            <div class="testimonial-card">
+              <p class="testimonial-quote">
+                I used DataPay to buy airtime when I need to continue a call quickly with my mom and it was swift.
+              </p>
+              <p class="testimonial-author">Moonlight</p>
+            </div>
+          </div>
+
+          <!-- Carousel Controls -->
+          <div class="testimonial-controls reveal-on-scroll">
+            <button class="testimonial-btn" id="prevTestimonial" aria-label="Previous testimonials">
+              <img src="assets/arrow-left.svg" alt="" width="24" height="24">
+            </button>
+            <button class="testimonial-btn active" id="nextTestimonial" aria-label="Next testimonials">
+              <img src="assets/arrow-right-white.svg" alt="" width="24" height="24">
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Contact Us -->
+    <section class="section section-contact" id="contact">
+      <div class="section-container contact-layout">
+        <!-- Left: Copy & Socials -->
+        <div class="contact-info">
+          <span class="section-eyebrow">CONTACT US</span>
+          <h2 class="section-title contact-title">Reach Out To Us</h2>
+          <p class="contact-description">
+            If you have any complaints, you can send us a DM on any of the social media platforms listed below.
+            <br><br>
+            Alternatively, you can complete the form and we’ll reply you promptly.
+          </p>
+
+          <div class="socials-group">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow us on Instagram">
+              <img src="assets/instagram.svg" alt="Instagram" width="24" height="24">
+            </a>
+            <a href="https://wa.me" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Chat with us on WhatsApp">
+              <img src="assets/whatsapp.svg" alt="WhatsApp" width="24" height="24">
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div class="contact-form-card">
+          <form class="contact-form" id="contactForm" onsubmit="event.preventDefault();">
+            <div class="form-group">
+              <label for="username" class="form-label">Username</label>
+              <input type="text" id="username" class="form-input" placeholder="Enter your valid username" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" id="email" class="form-input" placeholder="Enter your email address" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea id="message" class="form-textarea" placeholder="Enter your message" rows="3" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-submit" id="submitBtn" disabled>
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-wrapper">
+    <div class="footer-bg-frame" aria-hidden="true">
+      <img src="assets/footer-bg.png" alt="" class="footer-bg-pattern">
+    </div>
+
+    <div class="footer-container">
+      <div class="footer-content">
+        <!-- Col 1: Brand & Email -->
+        <div class="footer-col footer-col-brand">
+          <h2 class="footer-heading">Your everyday payments, made easier.</h2>
+          <div class="footer-email-block">
+            <span class="footer-email-label">Email Us</span>
+            <a href="mailto:datapayemail@gmail.com" class="footer-email-link">datapayemail@gmail.com</a>
+          </div>
+        </div>
+
+        <!-- Right Side: Links Group (Nav + Legal) -->
+        <div class="footer-links-group">
+          <!-- Col 2: Navigation Links -->
+          <div class="footer-col footer-col-nav">
+            <span class="footer-nav-label">Navigation Links</span>
+            <ul class="footer-nav-list">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Legal Links -->
+          <div class="footer-col footer-col-legal">
+            <a href="#terms" class="legal-link">
+              <span>Terms &amp; Conditions</span>
+              <img src="assets/arrow-up.svg" alt="" width="20" height="20" class="legal-arrow">
+            </a>
+            <a href="#privacy" class="legal-link">
+              <span>Privacy Policy</span>
+              <img src="assets/arrow-up.svg" alt="" width="20" height="20" class="legal-arrow">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Giant Watermark Logo pinned to the bottom of the footer-wrapper -->
+    <div class="footer-watermark" aria-hidden="true">
+      DataPay
+    </div>
+  </footer>
+
+  <!-- Sticky Bottom Action Dock (appears when scrolled out of hero) -->
+  <aside class="bottom-action-dock" id="bottomActionDock" aria-label="Quick Actions" aria-hidden="true">
+    <div class="bottom-action-dock-inner">
+      <a href="#login" class="btn btn-dock-login">Log In</a>
+      <a href="#get-started" class="btn btn-dock-start">Get Started</a>
+    </div>
+  </aside>
+
+  <script src="app.js?v=4"></script>
+</body>
+</html>

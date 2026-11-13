@@ -1,0 +1,12 @@
+# Test files and scripts
+test_*
+run_*
+screenshot_*
+verified_*
+check_*
+figma_*
+*.ps1
+deploy_manifest.json
+get_manifest.py
+setup_git_and_push.py
+.vercel
