@@ -1796,9 +1796,10 @@ ul {
   }
 
   .hero-headline {
-    font-size: clamp(34px, 8.5vw, 42px);
-    letter-spacing: -1px;
+    font-size: 42px;
+    letter-spacing: -1.2px;
     line-height: 1.15;
+    text-wrap: balance;
     padding: 0 4px;
   }
 
@@ -1814,9 +1815,9 @@ ul {
   }
 
   .hero-subtext {
-    font-size: 14px;
-    line-height: 20px;
-    margin-top: 8px;
+    font-size: 15px;
+    line-height: 22px;
+    margin-top: 10px;
     padding: 0 4px;
     max-width: 95%;
   }
