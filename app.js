@@ -138,21 +138,21 @@ document.addEventListener('DOMContentLoaded', () => {
       stepTimeouts.push(
         setTimeout(() => {
           if (stepCards[0]) stepCards[0].classList.add('revealed');
-        }, 150)
+        }, 100)
       );
 
-      // Step 2 reveals after a delay (~1.8 seconds)
+      // Step 2 reveals after a 800ms delay
       stepTimeouts.push(
         setTimeout(() => {
           if (stepCards[1]) stepCards[1].classList.add('revealed');
-        }, 1800)
+        }, 900)
       );
 
-      // Step 3 reveals after another delay (~1.8 seconds)
+      // Step 3 reveals after another 800ms delay
       stepTimeouts.push(
         setTimeout(() => {
           if (stepCards[2]) stepCards[2].classList.add('revealed');
-        }, 3500)
+        }, 1700)
       );
     };
 
