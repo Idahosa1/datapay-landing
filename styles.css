@@ -836,7 +836,7 @@ ul {
 
 .testimonials-track {
   display: flex;
-  gap: 40px;
+  gap: 16px;
   overflow-x: auto;
   scroll-snap-type: none;
   scroll-behavior: auto;
@@ -865,9 +865,9 @@ ul {
   padding: 24px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 24px;
-  min-height: 240px;
+  justify-content: flex-start;
+  gap: 36px;
+  min-height: auto;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
   user-select: none;
   -webkit-user-select: none;
@@ -1729,7 +1729,7 @@ ul {
     flex: 0 0 320px;
     min-height: auto;
     padding: 18px 20px;
-    gap: 14px;
+    gap: 36px;
     justify-content: flex-start;
   }
 
@@ -1961,17 +1961,17 @@ ul {
 
   .testimonials-track {
     padding: 4px 0;
-    gap: 40px;
+    gap: 12px;
   }
 
   .testimonial-card {
     flex: 0 0 270px;
     min-height: auto;
     height: auto;
-    padding: 14px 16px;
+    padding: 16px;
     border-radius: 16px;
     justify-content: flex-start;
-    gap: 10px;
+    gap: 36px;
   }
 
   .testimonial-quote {
@@ -1983,7 +1983,7 @@ ul {
     font-size: 13px;
     font-weight: 600;
     line-height: 18px;
-    margin-top: 2px;
+    margin-top: 0;
   }
 
   .testimonials-controls {
