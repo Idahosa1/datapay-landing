@@ -836,7 +836,7 @@ ul {
 
 .testimonials-track {
   display: flex;
-  gap: 16px;
+  gap: 40px;
   overflow-x: auto;
   scroll-snap-type: none;
   scroll-behavior: auto;
@@ -1961,7 +1961,7 @@ ul {
 
   .testimonials-track {
     padding: 4px 0;
-    gap: 12px;
+    gap: 40px;
   }
 
   .testimonial-card {
@@ -2040,16 +2040,22 @@ ul {
 
   .form-input {
     height: 42px;
-    font-size: 16px;
+    font-size: 14px;
     padding: 0 12px;
     border-radius: 10px;
   }
 
   .form-textarea {
     min-height: 72px;
-    font-size: 16px;
+    font-size: 14px;
     padding: 10px 12px;
     border-radius: 10px;
+  }
+
+  .form-input::placeholder,
+  .form-textarea::placeholder {
+    font-size: 13px;
+    color: var(--grey-600);
   }
 
   .btn-submit {

@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const navPillItems = document.querySelectorAll('.nav-pill-item');
   const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
   const testimonialsTrack = document.getElementById('testimonialsTrack');
-  const prevTestimonialBtn = document.getElementById('prevTestimonial');
-  const nextTestimonialBtn = document.getElementById('nextTestimonial');
 
   // Mobile menu toggle
   if (mobileMenuBtn && mobileMenuDrawer) {
@@ -214,23 +212,13 @@ document.addEventListener('DOMContentLoaded', () => {
     revealTargets.forEach((target) => target.classList.add('is-revealed'));
   }
 
-  // Testimonials Auto-Scroll Ticker (Continuous self-scroll, 50% speed on hover, drag-to-scroll, buttons)
-  if (testimonialsTrack && prevTestimonialBtn && nextTestimonialBtn) {
-    const scrollAmount = 402; // card width (386px) + gap (16px)
+  // Testimonials Auto-Scroll Ticker (Continuous self-scroll, 50% speed on hover/touch, drag-to-scroll)
+  if (testimonialsTrack) {
     let isDown = false;
     let startX = 0;
     let scrollStart = 0;
     let isHovering = false;
     let tickerRafId = null;
-
-    // Carousel buttons
-    prevTestimonialBtn.addEventListener('click', () => {
-      testimonialsTrack.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-    });
-
-    nextTestimonialBtn.addEventListener('click', () => {
-      testimonialsTrack.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    });
 
     // Drag-to-Scroll Functionality
     testimonialsTrack.addEventListener('mousedown', (e) => {
@@ -287,7 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start auto-scroll ticker
     tickerRafId = requestAnimationFrame(tickerStep);
 
-    // Hover detection: slow down to 50% speed on hover, return to normal when not hovering
+    // Hover & touch detection: slow down to 50% speed on hover/touch, return to normal when released
     const testimonialsWrapper = document.querySelector('.testimonials-wrapper') || testimonialsTrack;
 
     testimonialsWrapper.addEventListener('mouseenter', () => {
@@ -297,6 +285,14 @@ document.addEventListener('DOMContentLoaded', () => {
     testimonialsWrapper.addEventListener('mouseleave', () => {
       isHovering = false;
     });
+
+    testimonialsWrapper.addEventListener('touchstart', () => {
+      isHovering = true;
+    }, { passive: true });
+
+    testimonialsWrapper.addEventListener('touchend', () => {
+      isHovering = false;
+    }, { passive: true });
 
     // Pause animation when browser tab is hidden to save resources
     document.addEventListener('visibilitychange', () => {
