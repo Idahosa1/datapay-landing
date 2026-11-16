@@ -141,18 +141,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 100)
       );
 
-      // Step 2 reveals after a 800ms delay
+      // Step 2 reveals after a 350ms delay
       stepTimeouts.push(
         setTimeout(() => {
           if (stepCards[1]) stepCards[1].classList.add('revealed');
-        }, 900)
+        }, 450)
       );
 
-      // Step 3 reveals after another 800ms delay
+      // Step 3 reveals after another 350ms delay
       stepTimeouts.push(
         setTimeout(() => {
           if (stepCards[2]) stepCards[2].classList.add('revealed');
-        }, 1700)
+        }, 800)
       );
     };
 
@@ -211,6 +211,24 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     revealTargets.forEach((target) => target.classList.add('is-revealed'));
   }
+
+  // Equalize testimonial quote heights to match the longest testimonial for uniform card height
+  const equalizeTestimonialQuotes = () => {
+    const quotes = document.querySelectorAll('.testimonial-quote');
+    if (!quotes.length) return;
+    quotes.forEach((q) => (q.style.minHeight = ''));
+    let maxQuoteHeight = 0;
+    quotes.forEach((q) => {
+      const h = q.scrollHeight;
+      if (h > maxQuoteHeight) maxQuoteHeight = h;
+    });
+    if (maxQuoteHeight > 0) {
+      quotes.forEach((q) => (q.style.minHeight = `${maxQuoteHeight}px`));
+    }
+  };
+
+  equalizeTestimonialQuotes();
+  window.addEventListener('resize', equalizeTestimonialQuotes);
 
   // Testimonials Auto-Scroll Ticker (Continuous self-scroll, 50% speed on hover/touch, drag-to-scroll)
   if (testimonialsTrack) {
